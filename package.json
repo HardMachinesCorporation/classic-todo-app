@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "format:api": "pnpm -F api format"
   },
   "keywords": [],
   "author": "",
@@ -12,6 +12,14 @@
   "packageManager": "pnpm@10.12.1",
   "devDependencies": {
     "@types/node": "^22.15.34",
+    "prettier": "^3.6.2",
+    "prettier-plugin-organize-imports": "^4.1.0",
     "typescript": "^5.8.3"
+  },
+  "lint-staged": {
+    "packages/api/**/*.{ts,js,json,md}": [
+      "prettier --config prettier.config.js --write",
+      "git add"
+    ]
   }
 }

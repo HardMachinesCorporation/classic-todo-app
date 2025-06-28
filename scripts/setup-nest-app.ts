@@ -5,12 +5,15 @@ import { execSync } from 'child_process';
 
 const appName: string = process.argv[2];
 
+// ✨ Modifier apps afin qu'il est correspondante au folders qui inclut tous les projects
+const appFolder:string = 'packages'
+
 if (!appName) {
     console.error('❌ Please provide the app name: node scripts/setup-nest-app.ts <app-name>');
     process.exit(1);
 }
 
-const rootDir = path.resolve('apps', appName);
+const rootDir = path.resolve(appFolder, appName);
 if (!fs.existsSync(rootDir)) {
     console.error(`❌ Directory ${rootDir} does not exist. Make sure you created the Nest app first.`);
     process.exit(1);

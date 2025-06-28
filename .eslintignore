@@ -1,0 +1,2 @@
+# .eslintignore (root)
+packages/api/**

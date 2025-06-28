@@ -7,3 +7,28 @@ dist/
 pnpm-lock.yaml
 packages/**/dist
 packages/**/node_modules
+
+# Nuxt dev/build outputs
+packages/web/.output
+packages/web/.data
+packages/web/.nuxt
+packages/web/.nitro
+packages/web/.cache
+packages/web/dist
+
+# Node dependencies
+packages/web/node_modules
+
+# Logs
+packages/web/logs
+packages/web/*.log
+
+# Misc
+packages/web/.DS_Store
+packages/web/.fleet
+packages/web/.idea
+
+# Local env files
+packages/web/.env
+packages/web/.env.*
+!packages/web/.env.example
