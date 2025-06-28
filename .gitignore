@@ -1,2 +1,9 @@
 .idea
 .env
+
+node_modules/
+dist/
+.idea/
+pnpm-lock.yaml
+packages/**/dist
+packages/**/node_modules
