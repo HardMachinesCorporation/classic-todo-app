@@ -1,5 +1,7 @@
 {
+  "extends": "../../tsconfig.base.json",
   "compilerOptions": {
+    "types": ["jest"],
     "module": "commonjs",
     "declaration": true,
     "removeComments": true,
@@ -17,5 +19,7 @@
     "noImplicitAny": true,
     "strictBindCallApply": true,
     "noFallthroughCasesInSwitch": true
-  }
+  },
+  "include": ["src/**/*","test", "**/*.spec.ts"],
+  "exclude": ["node_modules"]
 }
