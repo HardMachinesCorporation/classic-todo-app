@@ -15,4 +15,4 @@ const configService = new ConfigService<EnvVariables>(parseEnv);
 const zodConfigService = new ZodService(configService);
 
 // export singleton
-export const zod: ZodService = zodConfigService;
+export const zodConfig: ZodService = zodConfigService;

@@ -1,9 +1,9 @@
-import { Injectable, Logger } from '@nestjs/common';
+import { Injectable, Logger, OnModuleInit } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
 import { EnvVariables, NodeEnvironment } from './env/validate.env';
 
 @Injectable()
-export class ZodService {
+export class ZodService implements OnModuleInit {
   private readonly logger = new Logger(ZodService.name);
   private env!: EnvVariables['NODE_ENV'];
   private readonly cache: Map<string, unknown> = new Map();
