@@ -6,6 +6,8 @@ import { z } from 'zod';
 
 dotenv.config({ encoding: 'utf-8', path: '.env' });
 
+export type NodeEnvironment = 'development' | 'production';
+
 // 🛠️ Errors Formater
 const customErrorMap: z.ZodErrorMap = (issue, _ctx) => {
   if (issue.code === z.ZodIssueCode.invalid_type) {
@@ -48,6 +50,7 @@ const ServerSettingsSchema = z.object({
     .default('/api')
     .describe('API prefix'),
   NODE_ENV: z.enum(['development', 'production']).describe('Node environment'),
+  FRONTEND_URL: z.string().trim().url().describe('Frontend URL'),
 });
 
 // 🧩 Fusion
