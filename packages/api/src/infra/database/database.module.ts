@@ -14,7 +14,7 @@ import { getDatabaseConfig } from './config/get-database.config';
     }),
   ],
   providers: [],
-  exports: [],
+  exports: [TypeOrmModule],
 })
 export class DatabaseModule implements OnModuleInit {
   private readonly logger = new Logger(DatabaseModule.name);

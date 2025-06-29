@@ -6,6 +6,8 @@
   "private": true,
   "license": "UNLICENSED",
   "scripts": {
+    "typeorm:create": "ts-node -r tsconfig-paths/register ./node_modules/typeorm/cli.js migration:create src/infra/database/migrations/CreateUserTable",
+    "typeorm:run": "node ./node_modules/typeorm/cli.js migration:run -d ./dist/infra/database/config/data-source.js",
     "nest": "nest",
     "build": "nest build",
     "format": "prettier --config ../../prettier.config.js --write \"src/**/*.{ts,js,json,md}\"",
